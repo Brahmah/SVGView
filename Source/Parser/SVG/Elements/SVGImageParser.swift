@@ -16,7 +16,7 @@ class SVGImageParser: SVGBaseElementParser {
         let height = SVGHelper.parseCGFloat(context.properties, "height")
 
         // Base64 image
-        let decodableFormat = ["image/png", "image/jpg", "image/svg+xml"]
+        let decodableFormat = ["image/png", "image/jpg", "image/jpeg", "image/svg+xml"]
         for format in decodableFormat {
             let prefix = "data:\(format);base64,"
             if src.hasPrefix(prefix) {
